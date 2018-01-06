@@ -9,4 +9,4 @@
 
 ## 感谢
 
-非常感谢[wechat_jump_game](https://github.com/wangshub/wechat_jump_game)对我的启发
+非常感谢[wechat_jump_game](https://github.com/wangshub/wechat_jump_game)对我的帮助
