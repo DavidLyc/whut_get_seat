@@ -95,4 +95,5 @@ def press_confirm_button():
 
 def press_back_button():
     # 返回上一个页面
-    press_screen(70, 135)
+    cmd = 'adb shell input keyevent KEYCODE_BACK'
+    os.system(cmd)
