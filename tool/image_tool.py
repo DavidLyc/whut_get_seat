@@ -41,7 +41,7 @@ def get_free_seat(im_pixel):
                 # 休眠 0.3s 判断抢座是否成功
                 time.sleep(0.3)
                 im_pixel = get_seat_auto.get_image_pixel()
-                if im_pixel[x, y][0] != 243:
+                if im_pixel[x, y][0] not in range(180, 230):
                     print('找到空位啦！')
                     return True
     print("居然没有座位了...")
