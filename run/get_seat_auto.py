@@ -41,7 +41,7 @@ def main():
         time.sleep(0.3)
         # 找到没有满座的教室并点击
         if image_tool.get_empty_floor(get_image_pixel()):
-            time.sleep(0.8)
+            time.sleep(0.6)
             # 找到空位并点击，成功后退出程序
             if image_tool.get_free_seat(get_image_pixel()):
                 return
