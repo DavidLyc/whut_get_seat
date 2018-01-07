@@ -1,4 +1,6 @@
 from tool import screen_tool
+from run import get_seat_auto
+import time
 
 
 def get_empty_floor(im_pixel):
@@ -34,10 +36,14 @@ def get_free_seat(im_pixel):
             if im_pixel[x, y][0] == 243 \
                     and im_pixel[x, y][1] == 243 \
                     and im_pixel[x, y][2] == 242:
-                print('找到空位啦！')
                 screen_tool.press_screen(x, y)
                 screen_tool.press_confirm_button()
-                return True
+                # 休眠 0.3s 判断抢座是否成功
+                time.sleep(0.3)
+                im_pixel = get_seat_auto.get_image_pixel()
+                if im_pixel[x, y][0] != 243:
+                    print('找到空位啦！')
+                    return True
     print("居然没有座位了...")
     screen_tool.press_back_button()
     return False
